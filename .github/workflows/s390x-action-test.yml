@@ -27,8 +27,8 @@ jobs:
       uses: uraimo/run-on-arch-action@master
       id: runcmd
       with:
-        architecture: s390x
-        distribution: ubuntu18.04
+        arch: s390x
+        distro: ubuntu18.04
         run: |
           apt update && apt install -y build-essential python
           python --version >> output.txt
