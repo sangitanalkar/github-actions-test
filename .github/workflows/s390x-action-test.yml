@@ -30,8 +30,7 @@ jobs:
         architecture: s390x
         distribution: ubuntu18.04
         run: |
-          apt update
-          apt install -y build-essential python
+          apt update && apt install -y build-essential python
           python --version >> output.txt
           uname -a >> output.txt
           echo | gcc -v -E - 2>&1 | grep cc1 >> output.txt
